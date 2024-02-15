@@ -7,6 +7,7 @@ def select_file():
    root = tk.Tk()
    root.withdraw()  # Hide the main window
    file_path = filedialog.askopenfilename()  # Open file dialog to select a file
+   root.destroy()
    return file_path
 def update_repository():
    # Navigate to the repository directory
@@ -31,6 +32,6 @@ update_repository()
 # Schedule the update to occur every 24 hours
 while True:
    # Sleep for 24 hours
-   time.sleep(20)
+   time.sleep(24*60*60)
    # Update the repository
    update_repository()

@@ -5,12 +5,6 @@ suspension works
 vehicle speed is 50 kmph
  Vehicle is full function.
 oversteering is working
-vehicle speed is decreased
-vehicle speed is increased
-vehicle speed is 100 kmph
-vehicle speed is 110 kmph
-vehicle speed is 180 kmph
-vehicle
 
 
 
