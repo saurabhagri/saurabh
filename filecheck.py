@@ -17,7 +17,7 @@ def update_repository():
    # Check if the file exists
    if os.path.exists(text_file_path):
        # Change directory to the repository
-       os.chdir('D:\\GM\\Demo\\1307\\')
+       os.chdir('D:\\GM\\Demo\\saurabh\\')
        # Add the file to the repository
        subprocess.run(["git", "add", "."])
        # Commit the changes
@@ -31,6 +31,6 @@ update_repository()
 # Schedule the update to occur every 24 hours
 while True:
    # Sleep for 24 hours
-   time.sleep(24 * 60 * 60)
+   time.sleep(20)
    # Update the repository
    update_repository()
