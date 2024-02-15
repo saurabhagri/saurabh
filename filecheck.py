@@ -7,7 +7,6 @@ def select_file():
    root = tk.Tk()
    root.withdraw()  # Hide the main window
    file_path = filedialog.askopenfilename()  # Open file dialog to select a file
-   root.destroy()
    return file_path
 def update_repository():
    # Navigate to the repository directory
