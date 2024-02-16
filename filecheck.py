@@ -1,4 +1,5 @@
 import os
+import sys
 import subprocess
 import time
 import tkinter as tk
@@ -36,3 +37,4 @@ while True:
    time.sleep(20)
    # Update the repository
    update_repository()
+   sys.exit()
