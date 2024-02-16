@@ -3,15 +3,17 @@ import subprocess
 import time
 import tkinter as tk
 from tkinter import filedialog
+
 def select_file():
    root = tk.Tk()
    root.withdraw()  # Hide the main window
    file_path = filedialog.askopenfilename()  # Open file dialog to select a file
    return file_path
+
 def update_repository():
    # Navigate to the repository directory
    # repo_path = 'https://github.com/akshaypophale/1307'
-   repo_path = 'https://github.com/saurabhagri/saurabh.git'
+   repo_path = 'https://github.com/saurabhagri/saurabh'
    # Prompt the user to select a file
    text_file_path = select_file()
    # Check if the file exists
