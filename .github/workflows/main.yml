@@ -1,0 +1,10 @@
+name: First Workflow
+on: workflow_dispatch
+jobs:
+  first-job:
+    runs-on: windows-latest
+    steps:
+      - name: Print test starts
+        run: echo "Test starts!"
+      - name: Print test ends
+        run: echo "Test ends!"

@@ -1,0 +1,32 @@
+name: Run Robot Framework Tests
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  setup:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10
+      
+      - name: Create pip.ini file
+        run: |
+          mkdir %APPDATA%\pip
+          echo [global] > %APPDATA%\pip\pip.ini
+          echo index-url =  >> %APPDATA%\pip\pip.ini
+          echo extra-index-url = >> %APPDATA%\pip\pip.ini
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Robot
+        run: |
+          python tests\
